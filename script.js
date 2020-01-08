@@ -34,7 +34,7 @@ function displayResults(responseJson) {
 
 function secondDisplayResults(responseJson) {
   console.log(JSON.stringify(responseJson.businesses[0], null, 4));
-
+  $('#yelp-results-list').empty();
 
   for (let i = 0; i < responseJson.businesses.length; i++){
 
@@ -44,7 +44,7 @@ function secondDisplayResults(responseJson) {
          <h3>Name: ${responseJson.businesses[i].name}</h3>
          <p>Catergory: ${responseJson.businesses[i].categories[0].title}</p>
          <p>Rating: ${responseJson.businesses[i].rating}</p>
-         <a target="_blank" href=${responseJson.businesses[i].url}>Link to Restaurant</a>
+         <a target="_blank" href=${responseJson.businesses[i].url}>Click here for more information</a>
        </li>`
     );};
   $('#yelp-results').removeClass('hidden');
