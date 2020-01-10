@@ -10,10 +10,14 @@
 </head>
 <body>
     <div class= "container">
-        <h1>ExploreIt!</h1>
+        <nav>
+            <h1 class="navbar">ExploreIt!</h1>
+        </nav>
+        
 
         <form id="js-form">
-            <label for="search-term">Let's Explore:</label>
+            <p class="introPara">Take the guesswork out of travel by getting instant access to the weather as soon as you type the city you'll be traveling to and also receiving recommendations on what to do while your're there.</p>
+            <label class= "searchterm" for="search-term">Let's Explore:</label>
             <input type="text" name="search-term" id="js-search-term" placeholder="enter city" required>
 
             <input type="submit" value="Search!">
@@ -27,7 +31,6 @@
 
         <section id="yelp-results" class="hidden">
             <h2>Today's Recommendations</h2>
-            <br>
             <ul id="yelp-results-list" ></ul>
         </section>
     </div>

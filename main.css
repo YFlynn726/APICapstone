@@ -9,6 +9,14 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#results {
+  border-style: groove;
+}
+
+#yelp-results {
+  border-style: groove;
+}
+
 button, input[type="text"] {
     padding: 5px;
 }
@@ -28,6 +36,8 @@ button:hover {
 
 ul {
   list-style: none;
+  background-color: gray;
+  padding: 0;
 }
 
 .hidden {
@@ -39,10 +49,34 @@ a {
   color: black;
 }
 
-#results {
-    border-style: groove;
-  }
-  
-  #yelp-results {
-    border-style: groove;
-  }
+.introPara {
+    background: #333;
+    color: seashell;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    width: 100%;
+    
+
+}
+
+h1 {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/19/69/iJCYR3.jpg');
+}
+
+.searchterm{
+    color: black;
+}
+
+h2 {
+    background-color: #333;
+    padding: 10px;
+}
