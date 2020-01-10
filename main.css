@@ -6,7 +6,9 @@
 body {
     background-color: gray;
     color: seashell;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
 }
 
 #results {
@@ -58,6 +60,8 @@ a {
 nav {
     background-color: #333;
     width: 100%;
+    color: #ecdb55;
+    font-size: xx-large;
     
 
 }
@@ -79,4 +83,15 @@ body {
 h2 {
     background-color: #333;
     padding: 10px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.submit {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
