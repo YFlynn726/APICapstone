@@ -9,6 +9,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 #results {
@@ -40,6 +42,7 @@ ul {
   list-style: none;
   background-color: gray;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hidden {
@@ -60,23 +63,22 @@ a {
 nav {
     background-color: #333;
     width: 100%;
-    color: #ecdb55;
-    font-size: xx-large;
-    
-
+     
 }
 
 h1 {
-    overflow: hidden;
     margin: 0;
     padding: 0;
+    display: inline;
+    color: #ecdb55;
+    font-size: xx-large;
 }
 
 body {
     background-image: url('https://mcdn.wallpapersafari.com/medium/19/69/iJCYR3.jpg');
 }
 
-.searchterm{
+.searchterm {
     color: black;
 }
 
@@ -93,5 +95,4 @@ input {
 .submit {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
-
 }
