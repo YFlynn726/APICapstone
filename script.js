@@ -44,7 +44,7 @@ function secondDisplayResults(responseJson) {
          <h3>Name: ${responseJson.businesses[i].name}</h3>
          <p>Catergory: ${responseJson.businesses[i].categories[0].title}</p>
          <p>Rating: ${responseJson.businesses[i].rating}</p>
-         <a target="_blank" href=${responseJson.businesses[i].url}>For more information, you can check out their site.</a>
+         <a target="_blank" href=${responseJson.businesses[i].url}>For more information, check out their site.</a>
        </li>`
     );};
   $('#yelp-results').removeClass('hidden');
