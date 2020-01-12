@@ -43,7 +43,7 @@ function secondDisplayResults(responseJson) {
       `<li>
          <h3>${responseJson.businesses[i].name}</h3>
          <p>Type: ${responseJson.businesses[i].categories[0].title}</p>
-         <p>Yelp Rating: ${responseJson.businesses[i].rating}</p>
+         <p>Yelp Rating: ${responseJson.businesses[i].rating} out of 5</p>
          <p>Price: ${responseJson.businesses[i].price}</p>
          <a target="_blank" href=${responseJson.businesses[i].url}>For details click here.</a>
        </li>`
