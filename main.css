@@ -1,37 +1,45 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
     background-color: gray;
     color: seashell;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    line-height: 1.6;
-    margin: 0;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
+    background-image: url('https://mcdn.wallpapersafari.com/medium/19/69/iJCYR3.jpg');
+    background-position: bottom;
+}
+
+p {
+    margin: 0;
 }
 
 #results {
   border-style: groove;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
 }
 
 #yelp-results {
   border-style: groove;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
 }
 
 button, input[type="text"] {
-    padding: 5px;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;    
 }
 
 button:hover {
     cursor: pointer;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .error-message {
@@ -40,9 +48,23 @@ button:hover {
 
 ul {
   list-style: none;
-  background-color: gray;
+  background-color: #F1F1F1;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #262625;
+}
+
+li {
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.list-items {
+    margin: 0;
 }
 
 .hidden {
@@ -54,45 +76,82 @@ a {
   color: black;
 }
 
+a:visited {
+    color: #A6D900;
+  }
+
 .introPara {
-    background: #333;
+    background: #262625;
     color: seashell;
     padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
 }
 
 nav {
-    background-color: #333;
+    background-color: #262625;
     width: 100%;
-     
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
     margin: 0;
     padding: 0;
     display: inline;
-    color: #ecdb55;
-    font-size: xx-large;
-}
-
-body {
-    background-image: url('https://mcdn.wallpapersafari.com/medium/19/69/iJCYR3.jpg');
+    color: #96C300;
+    font-size: 40px;
+    font-family: 'Seymour One', sans-serif;
 }
 
 .searchterm {
-    color: black;
+    color: #262625;
 }
 
 h2 {
-    background-color: #333;
+    background-color: #262625;
     padding: 10px;
+    margin-top: auto;
+    margin: 0;  
+}
+
+h3 {
+    margin-top: auto;
+    margin: 0;
+    font-size: 20px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
 }
 
 input {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F1F1F1;
+    border: .5px solid gray;
+    margin-top: 30px;
 }
 
+
 .submit {
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #262625;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #96C300;
+    font-weight: bold;
+    padding: 3px;
 }
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    body {
+      background-image: url('https://mcdn.wallpapersafari.com/medium/19/69/iJCYR3.jpg');
+      background-position: center;
+    }
+
+    a:hover {
+        color: #A6D900;
+      }
+  }

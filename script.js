@@ -24,9 +24,9 @@ function displayResults(responseJson) {
     $('#results-list').append(
 
       `<li>
-        <img src=${imgSrc} />
-        <h3>${responseJson.weather[i].main}</h3>
-        <p>${Math.floor(responseJson.main.temp)}</p>
+        <img src=${imgSrc} />        
+        <h1 class="list-items">${Math.floor(responseJson.main.temp)} &#8457;</h1>
+        <p class="weather">${responseJson.weather[i].main}</p>
        </li>`
     );};
   $('#results').removeClass('hidden');
@@ -41,10 +41,11 @@ function secondDisplayResults(responseJson) {
     $('#yelp-results-list').append(
 
       `<li>
-         <h3>Name: ${responseJson.businesses[i].name}</h3>
-         <p>Catergory: ${responseJson.businesses[i].categories[0].title}</p>
-         <p>Rating: ${responseJson.businesses[i].rating}</p>
-         <a target="_blank" href=${responseJson.businesses[i].url}>For more information, check out their site.</a>
+         <h3>${responseJson.businesses[i].name}</h3>
+         <p>Type: ${responseJson.businesses[i].categories[0].title}</p>
+         <p>Yelp Rating: ${responseJson.businesses[i].rating}</p>
+         <p>Price: ${responseJson.businesses[i].price}</p>
+         <a target="_blank" href=${responseJson.businesses[i].url}>For details click here.</a>
        </li>`
     );};
   $('#yelp-results').removeClass('hidden');
