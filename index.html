@@ -7,7 +7,7 @@
     <title>ExploreIt!</title>
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="#">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CSeymour+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class= "container">
@@ -17,10 +17,13 @@
         
         <form id="js-form">
             <p class="introPara">Take the guesswork out of travel by getting instant access to the weather and recommendations on what to do while you are there.</p>
-            <label class= "searchterm" for="search-term"></label>
+            
+            <label class= "searchterm" for="js-search-term"></label>
             <input type="text" name="search-term" id="js-search-term" placeholder="Enter City" required>
-            <label class= "zipcode" for="zipcode"></label>
+            
+            <label class= "zipcode" for="js-zipcode"></label>
             <input type="text" name="zipcode" id="js-zipcode" placeholder="Enter zipcode" >
+            
             <input class= "submit" type="submit" value="Let's ExploreIt!">
         </form>
 
