@@ -3,8 +3,8 @@
 'use strict';
 
 const apiKey = '2935326c022f87e31d30aa76733c8985';
-const searchURL = 'https://api.openweathermap.org/data/2.5/weather';
-const secondURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
+const weatherURL = 'https://api.openweathermap.org/data/2.5/weather';
+const yelpURL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
 
 function formatQueryParams(params){
   const queryItems = Object.keys(params)
@@ -12,7 +12,7 @@ function formatQueryParams(params){
   return queryItems.join('&');
 }
 
-function displayResults(responseJson) {
+function weatherResults(responseJson) {
   console.log(responseJson);
   $('#results-list').empty();
   $('#js-error-message').empty();
@@ -32,7 +32,7 @@ function displayResults(responseJson) {
   $('#results').removeClass('hidden');
 };
 
-function secondDisplayResults(responseJson) {
+function yelpResults(responseJson) {
   console.log(JSON.stringify(responseJson.businesses[0], null, 4));
   $('#yelp-results-list').empty();
 
@@ -51,14 +51,15 @@ function secondDisplayResults(responseJson) {
   $('#yelp-results').removeClass('hidden');
 };
 
-function getData(input) {
+function weatherData(input) {
   var params = {
     q: `${input}`,
+    zip: `${input}`,
     units: 'imperial',
     appid: apiKey,
   };
   const queryString = formatQueryParams(params);
-  const url = searchURL + '?' + queryString;
+  const url = weatherURL + '?' + queryString;
 
   console.log('url');
 
@@ -70,7 +71,7 @@ function getData(input) {
       throw new Error(response.statusText);
     })
     .then(responseJson => {
-      displayResults(responseJson);
+      weatherResults(responseJson);
     })
     .catch(err => {
       $('#js-error-message').text(`Something went horribly wrong: ${err.message}`);
@@ -79,12 +80,12 @@ function getData(input) {
 
 //yelpfusionapifetch
 
-function secondGetData(input) {
+function yelpData(input) {
   var params = {
     location: `${input}`,
   };
   const queryString = formatQueryParams(params);
-  const url2 = secondURL + '?' + queryString;
+  const url2 = yelpURL + '?' + queryString;
 
   console.log(url2);
 
@@ -99,7 +100,7 @@ function secondGetData(input) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => secondDisplayResults(responseJson))
+    .then(responseJson => yelpResults(responseJson))
     .catch(err => {
       $('#js-error-message').text(`Something went horribly wrong: ${err.message}`);
     });
@@ -109,8 +110,9 @@ function watchForm() {
   $('#js-form').submit(event => {
     event.preventDefault();
     const searchTerm = $('#js-search-term').val();
-    getData(searchTerm);
-    secondGetData(searchTerm);
+    const zipcode = $('#js-zipcode').val();
+    weatherData(searchTerm, zipcode);
+    yelpData(searchTerm);
   });
 }
 
