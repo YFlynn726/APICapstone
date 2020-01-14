@@ -78,8 +78,6 @@ function weatherData(input) {
     });
 }
 
-//yelpfusionapifetch
-
 function yelpData(input) {
   var params = {
     location: `${input}`,

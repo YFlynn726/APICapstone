@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="#">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Seymour+One&display=swap" rel="stylesheet">
-
-    
 </head>
 <body>
     <div class= "container">
@@ -17,35 +15,28 @@
             <h1 class="navbar">ExploreIt!</h1>
         </nav>
         
-
         <form id="js-form">
             <p class="introPara">Take the guesswork out of travel by getting instant access to the weather and recommendations on what to do while you are there.</p>
             <label class= "searchterm" for="search-term"></label>
             <input type="text" name="search-term" id="js-search-term" placeholder="Enter City" required>
             <label class= "zipcode" for="zipcode"></label>
             <input type="text" name="zipcode" id="js-zipcode" placeholder="Enter zipcode" >
-
             <input class= "submit" type="submit" value="Let's ExploreIt!">
         </form>
 
         <p id="js-error-message" class="error-message"></p>
+        
         <section id="results" class="hidden">
             <h2>Today's Weather Forecast</h2>
             <ul id="results-list" ></ul>
         </section>
-        <div id="row">
-            <section id="yelp-results" class="hidden">
+        
+        <section id="yelp-results" class="hidden">
             <h2 class="row" >Today's Recommendations</h2>
             <ul id="yelp-results-list"></ul>
-            </section>
-
-             <section id="yelp-things2do" class="hidden">
-            <h2 class="row">Today's Recommendations</h2>
-            <ul id="yelp-results-list2"></ul>
-            </section>
-        </div>
+        </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
